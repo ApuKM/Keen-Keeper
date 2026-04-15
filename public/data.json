@@ -1,0 +1,154 @@
+
+
+[
+  {
+    "id": 1,
+    "name": "Sarah Jenkins",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    "email": "sarah.j@outlook.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": [
+      "high school",
+      "traveler"
+    ],
+    "bio": "Best friend from high school. We went backpacking through Europe together in 2019.",
+    "goal": 14,
+    "next_due_date": "2024-03-10"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Chen",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "email": "m.chen.tech@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": [
+      "work",
+      "mentor"
+    ],
+    "bio": "Former manager at TechCorp. Always gives great career advice and book recommendations.",
+    "goal": 30,
+    "next_due_date": "2024-04-12"
+  },
+  {
+    "id": 3,
+    "name": "Elena Rodriguez",
+    "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    "email": "elena.rod@webmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": [
+      "college",
+      "roommate"
+    ],
+    "bio": "Lived together for three years in Austin. She's a professional chef now.",
+    "goal": 14,
+    "next_due_date": "2024-03-20"
+  },
+  {
+    "id": 4,
+    "name": "David Thompson",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "email": "dave.t@fitness-pro.net",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": [
+      "gym",
+      "neighbor"
+    ],
+    "bio": "Lived next door for 5 years. Usually my accountability partner for morning runs.",
+    "goal": 21,
+    "next_due_date": "2024-02-15"
+  },
+  {
+    "id": 5,
+    "name": "Priya Sharma",
+    "picture": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+    "email": "psharma.design@icloud.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": [
+      "college",
+      "creative"
+    ],
+    "bio": "Studied Graphic Design together. She keeps me updated on the latest art exhibitions.",
+    "goal": 60,
+    "next_due_date": "2024-05-10"
+  },
+  {
+    "id": 6,
+    "name": "James O'Connor",
+    "picture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    "email": "james.oconnor@legalmail.com",
+    "days_since_contact": 28,
+    "status": "almost due",
+    "tags": [
+      "gaming",
+      "childhood"
+    ],
+    "bio": "Known him since 2nd grade. We play online strategy games every other weekend.",
+    "goal": 30,
+    "next_due_date": "2024-03-18"
+  },
+  {
+    "id": 7,
+    "name": "Lisa Wang",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "email": "lisa.wang88@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": [
+      "book club",
+      "close friend"
+    ],
+    "bio": "Founded a monthly book club together. Huge fan of sci-fi and historical fiction.",
+    "goal": 14,
+    "next_due_date": "2024-03-29"
+  },
+  {
+    "id": 8,
+    "name": "Robert Miller",
+    "picture": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
+    "email": "rob.miller.architect@proton.me",
+    "days_since_contact": 90,
+    "status": "overdue",
+    "tags": [
+      "family",
+      "cousin"
+    ],
+    "bio": "Older cousin who lives in Chicago. We usually catch up on family holidays.",
+    "goal": 45,
+    "next_due_date": "2024-01-10"
+  },
+  {
+    "id": 9,
+    "name": "Chloe Beaumont",
+    "picture": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+    "email": "chloe.b@frenchpress.fr",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": [
+      "language-swap",
+      "traveler"
+    ],
+    "bio": "Met during a semester in Paris. We practice French and English over Zoom.",
+    "goal": 7,
+    "next_due_date": "2024-03-22"
+  },
+  {
+    "id": 10,
+    "name": "Samuel Jackson",
+    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    "email": "sam.j.photography@me.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": [
+      "hiking",
+      "local"
+    ],
+    "bio": "Met at a local photography workshop. He knows all the best sunrise spots in the state.",
+    "goal": 14,
+    "next_due_date": "2024-03-21"
+  }
+]
