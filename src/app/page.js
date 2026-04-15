@@ -1,7 +1,9 @@
-
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
-    <h2>Hello from keen</h2>
+    <section id="main" className="bg-[#F8FAFC]">
+      <Banner />
+    </section>
   );
 }

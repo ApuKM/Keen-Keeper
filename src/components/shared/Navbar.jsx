@@ -11,7 +11,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <nav className=" shadow">
+    <nav className="navbar shadow">
       <div className="flex justify-between gap-4 items-center  py-2 container mx-auto">
         <Image src={navIcon} alt="keen keeper logo" className="" />
 
