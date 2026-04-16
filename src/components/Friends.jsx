@@ -1,10 +1,8 @@
 import React from "react";
 import Friend from "./ui/Friend";
+import { friendsPromise } from "@/lib/friendsPromise";
 
-const friendsPromise = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
-  return res.json();
-};
+
 
 const Friends = async () => {
   const friends = await friendsPromise();

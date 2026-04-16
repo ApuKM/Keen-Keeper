@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Friend = ({ friend }) => {
   return (
-    <div>
+    <Link href={`friends/${friend.id}`}>
       <div className="text-center p-4 bg-white shadow-sm rounded-md hover:shadow-lg transition-all">
         <Image
           src={friend.picture}
@@ -29,7 +30,7 @@ const Friend = ({ friend }) => {
           {friend.status}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
