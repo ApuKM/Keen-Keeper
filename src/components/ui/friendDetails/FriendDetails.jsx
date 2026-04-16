@@ -7,7 +7,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 const DetailsSidebar = ({friend}) => {
   return (
     <div className="space-y-6">
-    <div className="text-center p-4 bg-white shadow-sm rounded-md">
+    <div className=" text-center p-4 bg-white shadow-sm rounded-md">
       <Image
         src={friend.picture}
         alt={friend.name}
@@ -34,7 +34,7 @@ const DetailsSidebar = ({friend}) => {
       <h3 className="text-[#64748B] mb-2 text-sm">{friend.bio}</h3>
       <h4 className="text-sm text-[#64748B] font-medium ">Email: {friend.email}</h4>
     </div>
-    <div className="space-y-4">
+    <div className="space-y-2">
     <button className="btn w-full bg-white flex items-center"><HiOutlineBellSnooze className="w-4 h-4"/><span className="text-[#1F2937] font-medium">Snooze 2 Weeks</span></button>
     <button className="btn w-full bg-white flex items-center"><GoArchive className="w-4 h-4"/><span className="text-[#1F2937] font-medium">Archive</span></button>
     <button className="btn w-full bg-white flex items-center text-red-500"><RiDeleteBin6Line className="w-4 h-4"/><span className=" font-medium">Delete</span></button>

@@ -14,11 +14,11 @@ const FriendDetails = async({params}) => {
 
     return (
         <div className=' py-10 md:py-20 bg-[#F8FAFC]'>
-            <div className='grid grid-cols-12 gap-6 w-11/12 max-w-7xl mx-auto'>
-            <div id='left' className='col-span-4'>
+            <div className='grid grid-cols-1 md:grid-cols-12 gap-6 w-11/12 max-w-7xl mx-auto'>
+            <div id='left' className='md:col-span-4'>
                 <DetailsSidebar friend={friend}/>
             </div>
-            <div id="right" className='col-span-8'>
+            <div id="right" className='md:col-span-8'>
                 <Interactions friend={friend}/>
             </div>
             </div>

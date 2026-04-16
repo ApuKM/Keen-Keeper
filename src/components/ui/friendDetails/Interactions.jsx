@@ -37,7 +37,7 @@ const Interactions = ({ friend }) => {
       </div>
       <div className="p-4 bg-white shadow-sm rounded-md">
         <h2 className="text-[#244D3F] font-medium text-xl mb-2">Quick Check-In</h2>
-        <InteractionBtn />
+        <InteractionBtn friend={friend}/>
       </div>
     </div>
   );
