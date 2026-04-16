@@ -12,12 +12,12 @@ const navLinks = [
 const Navbar = () => {
   return (
     <nav className="navbar shadow">
-      <div className="flex justify-between gap-4 items-center  py-2 container mx-auto">
+      <div className="flex flex-col gap-2 md:flex-row md:justify-between items-center py-2 container mx-auto ">
         <Image src={navIcon} alt="keen keeper logo" className="" />
 
         <ul className="flex justify-between gap-2 items-center">
           <div className="flex items-center gap-4">
-            {navLinks.map(navlink => (
+            {navLinks.map((navlink) => (
               <MyLink key={navlink.id} href={navlink.href}>
                 {navlink.name}
               </MyLink>

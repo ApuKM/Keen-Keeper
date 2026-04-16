@@ -7,13 +7,13 @@ import twiterIcon from "@/assets/twitter.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#244D3F] text-white   p-15">
+    <div className="bg-[#244D3F] text-white p-10 md:p-15">
       <footer className="footer footer-horizontal footer-center ">
         <aside>
           <Image
             src={footerIcon}
             alt="KeenKeeper"
-            className="w-80 object-center object-contain"
+            className="w-50 md:w-80 object-center object-contain"
           />
           <p className="text-white/80">
             Your personal shelf of meaningful connections. Browse, tend, and
@@ -39,16 +39,19 @@ const Footer = () => {
           </div>
         </aside>
       </footer>
-      <div className="flex items-center justify-between mt-8 text-white/80 text-sm border-t border-t-zinc-200 pt-5">
-        <p>
-          Copyright © {new Date().getFullYear()} KeenKeeper. All right reserved
-        </p>
-        <div className="flex items-center gap-2">
-          <p>Privacy Policy</p>
-          <p>Terms of Services</p>
-          <p>Cookies</p>
-        </div>
-      </div>
+   <div className="mt-8 border-t border-zinc-200 pt-8 text-sm text-white/80">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    <p className="text-center md:text-left order-2 md:order-1">
+      © {new Date().getFullYear()} KeenKeeper. All rights reserved.
+    </p>
+    <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 order-1 md:order-2">
+      <a href="/privacy" className="hover:text-white transition-colors cursor-pointer">Privacy Policy</a>
+      <a href="/terms" className="hover:text-white transition-colors cursor-pointer">Terms of Service</a>
+      <a href="/cookies" className="hover:text-white transition-colors cursor-pointer">Cookies</a>
+    </div>
+    
+  </div>
+</div>
     </div>
   );
 };
