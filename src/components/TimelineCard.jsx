@@ -14,10 +14,10 @@ const iconMap = {
 };
 
 const TimelineCard = () => {
-  const { timeLine, setTimeLine } = useContext(InteractionContext);
+  const { filteredData } = useContext(InteractionContext);
   return (
     <div className="grid grid-cols-1 gap-6">
-      {timeLine.map((item) => (
+      {filteredData.map((item) => (
         <div
           key={item.id}
           className="p-6 rounded-md shadow-sm flex items-center gap-4 bg-white"

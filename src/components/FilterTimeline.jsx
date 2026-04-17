@@ -1,6 +1,10 @@
-import React from "react";
+"use client"
+
+import { InteractionContext } from "@/lib/context";
+import React, { useContext } from "react";
 
 const FilterTimeline = () => {
+  const { setFilter } = useContext(InteractionContext);
   return (
     <div>
       <div className="dropdown">
@@ -12,10 +16,24 @@ const FilterTimeline = () => {
           className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
         >
           <li>
-            <a>Item 1</a>
+            <button className="btn" onClick={() => setFilter("all")}>
+              All
+            </button>
           </li>
           <li>
-            <a>Item 2</a>
+            <button className="btn" onClick={() => setFilter("Text")}>
+              Text
+            </button>
+          </li>
+          <li>
+            <button className="btn" onClick={() => setFilter("Call")}>
+              Call
+            </button>
+          </li>
+          <li>
+            <button className="btn" onClick={() => setFilter("Video")}>
+              Video
+            </button>
           </li>
         </ul>
       </div>

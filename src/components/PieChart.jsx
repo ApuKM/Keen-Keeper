@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { InteractionContext } from "@/lib/context";
 import React, { useContext } from "react";
@@ -7,14 +7,22 @@ import { Legend, Pie, PieChart, Tooltip } from "recharts";
 const Chart = () => {
   const { timeLine, setTimeLine } = useContext(InteractionContext);
 
-  const texts = timeLine.filter(item => item.interactionType === "Text")
-  const calls = timeLine.filter(item => item.interactionType === "Call")
-  const videos = timeLine.filter(item => item.interactionType === "Video")
+  //   const texts = timeLine.filter(item => item.interactionType === "Text")
+  //   const calls = timeLine.filter(item => item.interactionType === "Call")
+  //   const videos = timeLine.filter(item => item.interactionType === "Video")
+
+  const counts = timeLine.reduce(
+    (acc, item) => {
+      acc[item.interactionType]++;
+      return acc;
+    },
+    { Text: 0, Call: 0, Video: 0 },
+  );
 
   const data = [
-    { name: "Text", value: texts.length, fill: "#244D3F" },
-    { name: "Call", value: calls.length, fill: "#FF8042" },
-    { name: "Video", value: videos.length, fill: "#FF8067" },
+    { name: "Text", value: counts.Text, fill: "#244D3F" },
+    { name: "Call", value: counts.Call, fill: "#FF8042" },
+    { name: "Video", value: counts.Video, fill: "#FF8067" },
   ];
 
   return (
