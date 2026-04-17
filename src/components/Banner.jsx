@@ -1,11 +1,16 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
+import BannerData from "./ui/BannerData";
+import { friendsPromise } from "@/lib/friendsPromise";
 
-const Banner = () => {
+const Banner = async () => {
+  const friends = await friendsPromise();
   return (
     <div className="w-11/12 max-w-7xl mx-auto mt-10 md:mt-20">
       <div className="space-y-4 flex flex-col items-center">
-        <h1 className="text-[#1F2937] font-bold text-center text-4xl md:text-5xl">Friends to keep close in your life</h1>
+        <h1 className="text-[#1F2937] font-bold text-center text-4xl md:text-5xl">
+          Friends to keep close in your life
+        </h1>
         <p className="text-[#64748B] text-center md:w-[60%]">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
@@ -15,24 +20,7 @@ const Banner = () => {
           <span>Add a Friend</span>
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
-        <div className="text-center p-4 bg-white shadow-sm rounded-md">
-          <h2 className="text-[#244D3F] font-semibold text-3xl">10</h2>
-          <p className="text-[#64748B] text-lg">Total Friends</p>
-        </div>
-        <div className="text-center p-4 bg-white shadow-sm rounded-md">
-          <h2 className="text-[#244D3F] font-semibold text-3xl">10</h2>
-          <p className="text-[#64748B] text-lg">On Track</p>
-        </div>
-        <div className="text-center p-4 bg-white shadow-sm rounded-md">
-          <h2 className="text-[#244D3F] font-semibold text-3xl">10</h2>
-          <p className="text-[#64748B] text-lg">Need Attention</p>
-        </div>
-        <div className="text-center p-4 bg-white shadow-sm rounded-md">
-          <h2 className="text-[#244D3F] font-semibold text-3xl">10</h2>
-          <p className="text-[#64748B] text-lg">Interactions This Month</p>
-        </div>
-      </div>
+      <BannerData friends={friends} />
     </div>
   );
 };

@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
 import { InteractionContext } from "@/lib/context";
 import React, { useContext } from "react";
 
 const FilterTimeline = () => {
-  const { setFilter } = useContext(InteractionContext);
+  const { filter, setFilter } = useContext(InteractionContext);
   return (
     <div>
       <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn m-1">
-          Filter Timeline
+        <div tabIndex={0} role="button" className="btn m-1 text-[#64748B] text-base w-50">
+          {filter === "all" ? "Filter timeline" : filter}
         </div>
         <ul
           tabIndex="-1"

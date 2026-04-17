@@ -6,6 +6,7 @@ import React, { useContext } from "react";
 import callIcon from "@/assets/call.png";
 import textIcon from "@/assets/text.png";
 import videoIcon from "@/assets/video.png";
+import EmptyTimeline from "./ui/EmptyTimeline";
 
 const iconMap = {
   Call: callIcon,
@@ -15,7 +16,9 @@ const iconMap = {
 
 const TimelineCard = () => {
   const { filteredData } = useContext(InteractionContext);
-  return (
+  return filteredData.length === 0 ? (
+    <EmptyTimeline />
+  ) : (
     <div className="grid grid-cols-1 gap-6">
       {filteredData.map((item) => (
         <div
