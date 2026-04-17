@@ -13,6 +13,14 @@ const InteractionBtn = ({ friend }) => {
 
   const handleInteraction = (interactionType) => {
     toast.success(`${interactionType} with ${friend.name}`);
+
+    const newItem = {
+      id: Date.now(),
+      interactionType,
+      name: friend.name,
+      date: new Date().toLocaleDateString(),
+    }
+    setTimeLine((prev) => [newItem, ...prev])
   };
 
   return (
@@ -24,11 +32,15 @@ const InteractionBtn = ({ friend }) => {
         <Image src={callIcon} alt="Call-icon" className="mx-auto w-6 h-6" />
         <p className="text-lg mt-2">Call</p>
       </div>
-      <div className="text-center text-[#1F2937] p-4 bg-base-200  rounded-md">
+      <div className="text-center text-[#1F2937] p-4 bg-base-200  rounded-md"
+      onClick={() => handleInteraction("Text")}
+      >
         <Image src={textIcon} alt="Call-icon" className="mx-auto w-6 h-6" />
         <p className="text-lg mt-2">Text</p>
       </div>
-      <div className="text-center text-[#1F2937] p-4 bg-base-200 rounded-md">
+      <div className="text-center text-[#1F2937] p-4 bg-base-200 rounded-md"
+      onClick={() => handleInteraction("Video")}
+      >
         <Image src={videoIcon} alt="Call-icon" className="mx-auto w-6 h-6" />
         <p className="text-lg mt-2">Video</p>
       </div>

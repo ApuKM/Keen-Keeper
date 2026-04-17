@@ -1,16 +1,43 @@
-import Image from 'next/image';
-import React from 'react';
+"use client";
+
+import { InteractionContext } from "@/lib/context";
+import Image from "next/image";
+import React, { useContext } from "react";
+import callIcon from "@/assets/call.png";
+import textIcon from "@/assets/text.png";
+import videoIcon from "@/assets/video.png";
+
+const iconMap = {
+  Call: callIcon,
+  Text: textIcon,
+  Video: videoIcon,
+};
 
 const TimelineCard = () => {
-    return (
-        <div>
-            <Image src={""} alt='' />
-            <div>
-                <h4>meetup</h4>
-                <p>date</p>
-            </div>
+  const { timeLine, setTimeLine } = useContext(InteractionContext);
+  return (
+    <div className="grid grid-cols-1 gap-6">
+      {timeLine.map((item) => (
+        <div
+          key={item.id}
+          className="p-6 rounded-md shadow-sm flex items-center gap-4 bg-white"
+        >
+          <Image
+            src={iconMap[item.interactionType]}
+            alt=""
+            className="w-8 h-8"
+          />
+          <div className="space-y-3">
+            <h4 className="text-[#244D3F] font-medium text-xl">
+              {item.interactionType}{" "}
+              <span className="text-[#64748B] text-lg">with {item.name}</span>
+            </h4>
+            <p className="text-[#64748B] font-medium">{item.date}</p>
+          </div>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default TimelineCard;
